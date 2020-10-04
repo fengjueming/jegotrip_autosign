@@ -10,9 +10,6 @@ curl_setopt($ch, CURLOPT_HTTPHEADER,array('Content-Type: application/json'));
 curl_setopt($ch, CURLOPT_HEADER, 1);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER,1);
 $sContent = curl_exec($ch);
-$headerSize = curl_getinfo($ch, CURLINFO_HEADER_SIZE);
-$header = substr($sContent, 0, $headerSize);
 curl_close($ch);
-echo $header;
 echo $sContent;
 ?>
