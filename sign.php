@@ -14,4 +14,5 @@ $headerSize = curl_getinfo($ch, CURLINFO_HEADER_SIZE);
 $header = substr($sContent, 0, $headerSize);
 curl_close($ch);
 echo $header;
+echo $sContent;
 ?>
